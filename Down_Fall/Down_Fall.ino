@@ -13,7 +13,7 @@ int OldG,NewG,AllIsWell;
 
 const char* ssid     = "blah";
 const char* password = "password";
-const char* host = "192.168.6.26:8085";
+const char* host = "http://192.168.6.26:8085";
 //const char* host = "data.sparkfun.com";
 //const char* streamId   = "G2Kpo3JwYGc7bZYpoDGg";
 //const char* privateKey = "NWvmaKPJ2lhBEZlKMjWe";
@@ -82,7 +82,7 @@ void SendGet(bool Fall){
  // url += streamId;
  //url += "?private_key=";
  //  url += privateKey;
-String  url += "/&fallen=";
+String  url = "/&fallen=/fall?fallen=";
   url += Fall;
   
   Serial.print("Requesting URL: ");
